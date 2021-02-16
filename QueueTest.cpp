@@ -1,0 +1,21 @@
+#include "PiqureTrion.h"
+#include <iostream>
+
+int main(){
+}
+
+void enqueue(/*Q.x*/){/*
+	if Q.tail == Q.length
+		Q.tail == 1
+	else Q.tail = Q.tail + 1 */
+}
+
+void dequeue(/*Q*/){/*
+	x = Q[Q.head]
+	if Q.head == Q.length
+		Q.head == 1
+	else Q.head = Q.head + 1
+	return x */
+}
+
+
