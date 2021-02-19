@@ -1,7 +1,5 @@
-PROJ = Algorithme 
-SRC = Algorithme.cpp InsertSort.cpp Counting.cpp
+PROJ = Algorithms 
+SRC = Test.cpp Algorithms.cpp Stack.cpp
 ${PROJ}: ${SRC}
 	g++ -o ${PROJ} ${SRC}
 
-#PiqureTrion: test.cpp
-#	g++ test.cpp
