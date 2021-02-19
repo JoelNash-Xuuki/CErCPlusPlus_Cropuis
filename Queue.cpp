@@ -1,21 +1,48 @@
-#include "PiqureTrion.h"
+#include "Queue.h"
 #include <iostream>
 
-int main(){
-}
+Queue::Queue(){
+	head = tail = 0;
+};
 
-void enqueue(/*Q.x*/){/*
-	if Q.tail == Q.length
-		Q.tail == 1
-	else Q.tail = Q.tail + 1 */
-}
+void Queue::enqueue(int x){
+	if(!isFull()){
+		if(tail < sizeof(q)/sizeof(*q)){
+			q[tail] = x;
+			tail++;
+		}
+		else	
+			tail = 0;
+	}
+	else
+		std::cout << "overflow \n";
+};
 
-void dequeue(/*Q*/){/*
-	x = Q[Q.head]
-	if Q.head == Q.length
-		Q.head == 1
-	else Q.head = Q.head + 1
-	return x */
-}
+void Queue::dequeue(){
+	if(!isEmpty()){
+		int x = q[head];
+		if (head < sizeof(q)/sizeof(*q))
+			head++;
+		else
+			head = 0;
+	}
+	else 
+		std::cout << "underflow \n";
+};
+
+int Queue::getHead(){
+	return q[head];
+};
+
+bool Queue::isEmpty(){
+	return head == tail;
+};
+
+bool Queue::isFull(){
+	if(head == tail +1)
+		return true;
+	return false;	
+};
+
 
 
